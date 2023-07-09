@@ -1,38 +1,191 @@
-.App {
-  text-align: center;
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #F5F5F5;
+    background-color: #222;
+    font-size: 16px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-block {
+    display: flex;
+    padding: 50px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.profile-photo {
+    flex-basis: 40%;
+    padding-right: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.profile-info {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-photo img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 18px solid #444;
+    box-shadow: 0 0 25px 0 rgba(0,0,0,.8);
+}
+
+.profile-info span {
+    margin-bottom: 10px;
+}
+
+.profile-info h1 {
+    font-size: 3em;
+    margin: 0 0 20px;
+}
+
+.profile-info p {
+    font-size: 0.9em;
+    margin: 0 auto 10px;
+}
+
+.profile-buttons {
+    margin-top: auto;
+}
+
+.button {
+    display: inline-block;
+    font-size: 1em;
+    background-color: #333;
+    color: #FFF;
+    padding: 11px 29px;
+    border-radius: 30px;
+    border: 2px solid #FFF;
+    outline: 0;
+    box-shadow: 0 10px 10px -8px rgba(0,0,0,.78);
+}
+
+.download-button {
+    border-color: #007ced;
+    margin-right: 5px;
+}
+
+.download-button:hover {
+    background-color: #007ced;
+    transition: all .3s ease-in-out;
+}
+
+.contact-button:hover {
+    background-color: #FFF;
+    color: #333;
+    transition: all .3s ease-in-out;
+}
+
+.skills-block-header h4,
+.education-block-header h4,
+.experience-block-header h4 {
+    font-size: 2em;
+    position: relative;
+}
+
+.skills-block-header h4::before,
+.education-block-header h4::before,
+.experience-block-header h4::before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    background-color: #353535;
+    height: 2px;
+    bottom: 0;
+}
+
+.skills-block-header h4::after,
+.education-block-header h4::after,
+.experience-block-header h4::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 90%;
+    background-color: #007ced;
+    height: 2px;
+    bottom: 0;
+}
+
+.skills-block-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-block-info h6 {
+    font-size: 1.5em;
+    margin: 0 0 15px;
+}
+
+.skill-card-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.languages-block,
+.frameworks-block,
+.databases-block,
+.testing-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.skills-sub-block {
+    display: flex;
+    flex-direction: column;
+    /*flex-wrap: wrap;*/
+    /*max-height: 250px;*/
+}
+
+.skill-card {
+    margin-right: 20px;
+}
+
+.skill-card-info img {
+    display: inline-block;
+    width: auto;
+    height: 50px;
+}
+
+.education-block-info {
+    display: flex;
+}
+
+.education-card {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+}
+
+.experience-block-info {
+    display: flex;
+}
+
+.experience-card {
+    flex-basis: 50%;
+}
+
+@media (max-width: 768px) {
+    .profile-block {
+        flex-direction: column;
+    }
+
+    .profile-info {
+        margin-top: 20px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profile-buttons {
+        margin-top: 15px;
+    }
 }
